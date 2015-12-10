@@ -18,12 +18,6 @@ the parsed result is likely to be erroneous
 Match all the top level include header, global variable,
 function definition, class definition
 
-NOTICE: This module assumes many coding conventions,
-and should not be used as a reliable code analyzer.
-The following coding conventions were assumed:
-
-- All the headers files are put at the top of the file
-- No parentheses in function perimeter list
 """
 
 import re
@@ -111,9 +105,13 @@ INCLUDE_HEADER = re.compile(
     , re.X
 )
 
-FUNC  = IDENTIFIER + r'\s*' + r'\(([^\(\)])\)\s*\{\}'
-MAIN  = r'(int|void)\s+(main)\W'
-CLASS = r'\s+(class|struct)\W'
+
+def parse_func():
+    pass
+
+
+def parse_class():
+    pass
 
 
 def main():
